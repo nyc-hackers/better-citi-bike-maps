@@ -1,0 +1,9 @@
+{
+  "name": "citibike-frontend",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
