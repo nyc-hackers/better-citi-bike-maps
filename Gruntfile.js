@@ -13,25 +13,25 @@ module.exports = function(grunt) {
         verbose: true
       }
     },
-    // jshint: {
-    //   files: ["Gruntfile.js", "js/**/*.js"],
-    //   options: {
-    //     curly: true,
-    //     eqeqeq: true,
-    //     maxdepth: 2,
-    //     //undef: true, // NOTE: use this later
-    //     //unused: true,
-    //     quotmark: "double",
-    //     globals: {
-    //       jQuery: true
-    //     }
-    //   },
-    // },
+    jshint: {
+      files: ["Gruntfile.js", "js/**/*.js"],
+      options: {
+        curly: true,
+        eqeqeq: true,
+        maxdepth: 2,
+        //undef: true, // NOTE: use this later
+        //unused: true,
+        quotmark: "double",
+        globals: {
+          jQuery: true
+        }
+      },
+    },
     watch: {
-      // js: {
-      //   files: ["<%= jshint.files %>", "js/**/*.js"],
-      //   tasks: ["jshint", "jscs", "concat"]
-      // },
+      js: {
+        files: ["<%= jshint.files %>", "js/**/*.js"],
+        tasks: ["jshint", "jscs", "concat"]
+      },
       scss: {
         files: ["scss/**/*.scss"],
         tasks: ["sass"]
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
   var target = grunt.option("target") || "development";
   console.log("HELLO", target);
 
-  // grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-sass");
@@ -96,6 +96,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-jscs");
 
   grunt.registerTask("default",
-                     ["concat", "sass", "haml", "jscs"]); //add "jshint" later if necessary
+                     ["jshint", "concat", "sass", "haml", "jscs"]);
 
 };
