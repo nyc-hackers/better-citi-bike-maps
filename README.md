@@ -1,1 +1,0 @@
-Skeleton front-end for Citibike/Google Maps overlay app
