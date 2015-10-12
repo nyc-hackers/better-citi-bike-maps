@@ -34,11 +34,11 @@ module.exports = function(grunt) {
       // },
       scss: {
         files: ["scss/**/*.scss"],
-        // tasks: ["sass"]
+        tasks: ["sass"]
       },
       haml: {
         files: ["templates/**/*.haml"],
-        // tasks: ["haml"]
+        tasks: ["haml"]
       }
     },
     concat: {
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          "public/css/style.css": "scss/style.scss"
+          "public/css/style.css": "scss/app.scss"
         }
       }
     },
