@@ -7,6 +7,21 @@
   	"url" : "https://github.com/nyc-hackers/better-citi-bike-maps"
   },
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-haml": "^0.9.0",
+    "grunt-jscs": "^2.1.0"
+  },
+  "dependencies": {
+    "esutils": "^2.0.2",
+    "globals": "^8.11.0",
+    "install": "^0.1.8",
+    "js-tokens": "^1.0.1",
+    "line-numbers": "^0.2.0",
+    "npm": "^3.3.6",
+    "repeating": "^2.0.0",
+    "to-fast-properties": "^1.0.1"
   }
 }
