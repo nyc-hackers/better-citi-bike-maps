@@ -82,17 +82,17 @@ module.exports = function(grunt) {
           "index.html": "templates/index.haml",
         }
       }
-    }
+    },
     simplemocha: {
       options: {
-        globals: ['should'],
+        globals: ["should"],
         timeout: 3000,
         ignoreLeaks: false,
-        grep: '*-test',
-        ui: 'bdd',
-        reporter: 'tap'
-    },
-    all: { src: ['test/**/*.js'] }
+        grep: "*-test",
+        ui: "bdd",
+        reporter: "tap"
+      },
+      all: {src: ["test/**/*.js"]}
     }
   });
 
@@ -105,9 +105,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-haml");
-  grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks("grunt-simple-mocha");
 
   grunt.registerTask("default",
-                     ["jscs", "jshint", "watch", "concat", "sass", "haml", "simplemocha"]);
+                    ["jscs", "jshint", "watch", "concat", "sass",
+                    "haml", "simplemocha"]);
 
 };
