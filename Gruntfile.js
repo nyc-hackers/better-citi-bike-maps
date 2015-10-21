@@ -83,19 +83,31 @@ module.exports = function(grunt) {
         }
       }
     }
+    simplemocha: {
+      options: {
+        globals: ['should'],
+        timeout: 3000,
+        ignoreLeaks: false,
+        grep: '*-test',
+        ui: 'bdd',
+        reporter: 'tap'
+    },
+    all: { src: ['test/**/*.js'] }
+    }
   });
 
   var target = grunt.option("target") || "development";
   console.log("HELLO", target);
 
+  grunt.loadNpmTasks("grunt-jscs");
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-haml");
-  grunt.loadNpmTasks("grunt-jscs");
+  grunt.loadNpmTasks('grunt-simple-mocha');
 
   grunt.registerTask("default",
-                     ["jshint", "concat", "sass", "haml", "jscs"]);
+                     ["jscs", "jshint", "watch", "concat", "sass", "haml", "simplemocha"]);
 
 };
