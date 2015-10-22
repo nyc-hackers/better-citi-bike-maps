@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 %html{:lang => "en"}
-%head
-	%meta{:charset => "UTF-8"}/
-	%title Better Citibike Map
-	%link{:rel => "stylesheet", :href => "./public/css/style.css"}/
-%body
-	%h1 Hello, World!
+	%head
+		%meta{:charset => "UTF-8"}/
+		%title Better Citibike Map
+		%link{:rel => "stylesheet", :href => "./public/css/style.css", :type => "style/css"}/
+		%script{:type => "text/javascript", :src => "http://maps.googleapis.com/maps/api/js"}
+		%script{:type => "text/javascript", :src => "./public/js/app.js"}
+	%body
+		%h1 Hello, World!
+		%div{:id => "googleMap", :style => "width:500px;height:380px;"}
+			
