@@ -1,8 +1,11 @@
 {
   "name": "citibike-frontend",
   "version": "0.0.1",
-  "description": "",
-  "repository": "",
+  "description": "front end for Citibike-Google Maps hybrid app",
+  "repository": {
+  	"type" : "git",
+  	"url" : "https://github.com/nyc-hackers/better-citi-bike-maps"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
