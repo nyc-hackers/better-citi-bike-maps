@@ -1,5 +1,3 @@
-var citibikeMap = angular.module('citibikeMap',[]);
-
 citibikeMap.controller('mapController', ['$scope', '$http', function ($scope, $http) {
 	$scope.stations = [];
 	$http({

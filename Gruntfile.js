@@ -85,11 +85,11 @@ module.exports = function(grunt) {
         globals: ["should"],
         timeout: 3000,
         ignoreLeaks: false,
-        grep: "*-test",
+        // grep: "*-test",
         ui: "bdd",
         reporter: "tap"
       },
-      all: {src: ["test/**/*.js"]}
+      all: {src: ["test/*.js"]}
     }
   });
 
