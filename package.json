@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "front end for Citibike-Google Maps hybrid app",
   "repository": {
-  	"type" : "git",
-  	"url" : "https://github.com/nyc-hackers/better-citi-bike-maps"
+    "type": "git",
+    "url": "https://github.com/nyc-hackers/better-citi-bike-maps"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -14,7 +14,9 @@
     "grunt-haml": "^0.9.0",
     "grunt-jscs": "^2.1.0",
     "grunt-sass": "^1.0.0",
-    "grunt-simple-mocha": "^0.4.0"
+    "grunt-simple-mocha": "^0.4.0",
+    "should": "^7.1.1",
+    "superagent": "^1.4.0"
   },
   "dependencies": {
     "esutils": "^2.0.2",

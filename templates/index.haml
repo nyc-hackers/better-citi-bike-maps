@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-%html{:lang => "en"}
+%html{:lang => "en", "ng-app" => "citibikeMap"}
 	%head
 		%meta{:charset => "UTF-8"}/
 		%title Better Citibike Map
-		%link{:rel => "stylesheet", :href => "/public/css/style.css", :type => "style/css"}/
+		%link{:rel => "stylesheet", :href => "./public/css/style.css", :type => "style/css"}/
+		%script{:type => "text/javascript", :src => "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.js"}
 		%script{:type => "text/javascript", :src => "http://maps.googleapis.com/maps/api/js"}
-		%script{:type => "text/javascript", :src => "/public/js/app.js"}
+		%script{:type => "text/javascript", :src => "./public/js/app.js"}
 	%body
-		%h1 Hello, World!
-		%div{:id => "googleMap", :style => "width:800px;height:500px;"}
-			
+		%h1 Hello, New York!
+		%div{"ng-controller" => "mapController"}
+			%div{:id => "googleMap"}
+

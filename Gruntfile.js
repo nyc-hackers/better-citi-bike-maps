@@ -18,8 +18,6 @@ module.exports = function(grunt) {
         curly: true,
         eqeqeq: true,
         maxdepth: 2,
-        //undef: true, // NOTE: use this later
-        //unused: true,
         quotmark: "double",
         globals: {
           jQuery: true
@@ -48,9 +46,9 @@ module.exports = function(grunt) {
       app: {
         src: ["js/*.js",
           "js/config/" + "<%= configs.target %>" + ".js",
-          "js/factories/**/*.js",
-          "js/directives/**/*.js",
-          "js/controllers/**/*.js",
+          "js/factories/*.js",
+          "js/directives/*.js",
+          "js/controllers/*.js",
         ],
         // the location of the resulting JS file
         dest: "public/js/app.js"
@@ -87,11 +85,11 @@ module.exports = function(grunt) {
         globals: ["should"],
         timeout: 3000,
         ignoreLeaks: false,
-        grep: "*-test",
+        // grep: "*-test",
         ui: "bdd",
         reporter: "tap"
       },
-      all: {src: ["test/**/*.js"]}
+      all: {src: ["test/*.js"]}
     }
   });
 
